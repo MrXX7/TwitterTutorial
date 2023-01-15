@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TweetCell: View {
     var body: some View {
-        VStack {
+        VStack (alignment: .leading){
             HStack(alignment: .top) {
                 Image("batman")
                     .resizable()
@@ -29,7 +29,7 @@ struct TweetCell: View {
                         Text("2w")
                             .foregroundColor(.gray)
                     }
-                    Text("Hello world")
+                    Text("The night is darkest just before the dawn")
                 }.padding(.bottom)
                     .padding(.trailing)
             }
