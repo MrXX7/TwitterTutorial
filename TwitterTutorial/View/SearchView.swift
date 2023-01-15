@@ -15,10 +15,13 @@ struct SearchView: View {
             SearchBar(text: $searchText)
                 .padding()
             
-            VStack {
+            VStack (alignment: .leading){
                 ForEach(0..<19) { _ in
-                    Text("Add Users Here..")
-                }
+                    HStack {
+                        UserCell()
+                        Spacer()
+                    }
+                }.padding(.leading)
             }
         }.navigationTitle("Search")
             .navigationBarTitleDisplayMode(.inline)
