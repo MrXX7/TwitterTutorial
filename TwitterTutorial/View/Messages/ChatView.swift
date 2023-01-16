@@ -16,7 +16,15 @@ struct ChatView: View {
             ScrollView {
                 VStack (alignment: .leading, spacing: 12) {
                     ForEach(0..<20) { _ in
-                        Text("Chat Bubble")
+                        HStack {
+                            Text("Text message text")
+                                .padding()
+                                .background(Color.blue)
+                                .clipShape(ChatBubble(isFromCurrentUser: true))
+                                .foregroundColor(.white)
+                                .padding(.horizontal)
+                            Spacer()
+                        }
                     }
                 }
             }
