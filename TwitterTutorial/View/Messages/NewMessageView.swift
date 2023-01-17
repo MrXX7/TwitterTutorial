@@ -1,15 +1,18 @@
 //
-//  SearchView.swift
+//  NewMessageView.swift
 //  TwitterTutorial
 //
-//  Created by Oncu Can on 15.01.2023.
+//  Created by Oncu Can on 17.01.2023.
 //
 
 import SwiftUI
 
-struct SearchView: View {
+struct NewMessageView: View {
     
     @State var searchText = ""
+    @Binding var show: Bool
+    @Binding var startChat: Bool
+    
     var body: some View {
         ScrollView {
             SearchBar(text: $searchText)
@@ -19,15 +22,20 @@ struct SearchView: View {
                 ForEach(0..<19) { _ in
                     HStack {
                         Spacer() }
+                    Button(action: {
+                        self.show.toggle()
+                        self.startChat.toggle()
+                    }, label: {
                         UserCell()
-                    }
+                    })
+                }
                 }.padding(.leading)
             }
     }
 }
 
-struct SearchView_Previews: PreviewProvider {
+struct NewMessageView_Previews: PreviewProvider {
     static var previews: some View {
-        SearchView()
+        NewMessageView(show: .constant(true), startChat: .constant(true))
     }
 }
