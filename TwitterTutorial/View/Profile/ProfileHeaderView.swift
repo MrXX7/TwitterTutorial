@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ProfileHeaderView: View {
+    
     var body: some View {
         VStack {
             Image("batman")
@@ -48,6 +49,7 @@ struct ProfileHeaderView: View {
                         .foregroundColor(.gray)
                 }
             } .padding()
+            ProfileActionButtonView(isCurrentUser: false)
             Spacer()
         }
     }
