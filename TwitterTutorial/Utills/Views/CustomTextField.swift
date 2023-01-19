@@ -10,6 +10,7 @@ import SwiftUI
 struct CustomTextField: View {
     @Binding var text: String
     let placeholder: Text
+    let imageName: String
     
     var body: some View {
         ZStack (alignment: .leading) {
@@ -19,7 +20,7 @@ struct CustomTextField: View {
                     .padding(.leading, 40)
             }
             HStack (spacing: 16) {
-                Image(systemName: "envelope")
+                Image(systemName: imageName)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 20, height: 20)
@@ -28,11 +29,5 @@ struct CustomTextField: View {
                     TextField("", text: $text)
             }
         }
-    }
-}
-
-struct CustomTextField_Previews: PreviewProvider {
-    static var previews: some View {
-        CustomTextField(text: .constant(""), placeholder: Text("Email"))
     }
 }
