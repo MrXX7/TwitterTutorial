@@ -12,19 +12,45 @@ struct RegistrationView: View {
     @State var password = ""
     @State var fullname = ""
     @State var username = ""
-    
+    @State var showImagePicker = false
+    @State var selectedUIIMage: UIImage?
+    @State var image: Image?
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    
+    func loadImage() {
+        guard let selectedUIIMage = selectedUIIMage else { return }
+        image = Image(uiImage: selectedImage)
+    }
+    
     var body: some View {
         ZStack {
             VStack {
-                Image("plus_photo")
-                    .resizable()
-                    .renderingMode(.template)
-                    .scaledToFill()
-                    .frame(width: 140, height: 140)
-                    .padding(.top, 88)
-                    .padding(.bottom, 32)
-                    .foregroundColor(.white)
+                Button(action: { showImagePicker.toggle() }, label: {
+                    ZStack {
+                        if let image = image {
+                            image
+                                .resizable()
+                                .renderingMode(.template)
+                                .scaledToFill()
+                                .frame(width: 140, height: 140)
+                                .clipped()
+                                .cornerRadius(70)
+                                .padding(.top, 88)
+                                .padding(.bottom, 36)
+                        } else {
+                            Image("plus_photo")
+                                .resizable()
+                                .renderingMode(.template)
+                                .scaledToFill()
+                                .frame(width: 140, height: 140)
+                                .padding(.top, 88)
+                                .padding(.bottom, 32)
+                                .foregroundColor(.white)
+                        }
+                    }
+                    .sheet(isPresented: $showImagePicker, onDismiss: loadImage, content: {
+                    ImagePicker(image: $selectedUIIMage)
+                })
                 
                 VStack(spacing: 20) {
                     CustomTextField(text: $email, placeholder: Text("Email"), imageName: "envelope")
