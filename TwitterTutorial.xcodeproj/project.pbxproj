@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD24DE65299C81F100E3CF2A /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD24DE64299C81F100E3CF2A /* ImagePicker.swift */; };
 		AD31120C2972B92700FFB4F9 /* TwitterTutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD31120B2972B92700FFB4F9 /* TwitterTutorialApp.swift */; };
 		AD31120E2972B92700FFB4F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD31120D2972B92700FFB4F9 /* ContentView.swift */; };
 		AD3112102972B92800FFB4F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD31120F2972B92800FFB4F9 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD24DE64299C81F100E3CF2A /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		AD3112082972B92700FFB4F9 /* TwitterTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD31120B2972B92700FFB4F9 /* TwitterTutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitterTutorialApp.swift; sourceTree = "<group>"; };
 		AD31120D2972B92700FFB4F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				ADA2F6812979C1B400CDB37A /* TextArea.swift */,
 				ADA2F6882979CCA000CDB37A /* CustomTextField.swift */,
 				ADA2F68A2979D1C600CDB37A /* CustomSecureField.swift */,
+				AD24DE64299C81F100E3CF2A /* ImagePicker.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				ADB4E3382979428E002D64FF /* NewTweetView.swift in Sources */,
 				AD4BB3B2297880B000132E5A /* FilterButtonView.swift in Sources */,
 				AD31120C2972B92700FFB4F9 /* TwitterTutorialApp.swift in Sources */,
+				AD24DE65299C81F100E3CF2A /* ImagePicker.swift in Sources */,
 				AD8396292975721000C55A78 /* ChatBubble.swift in Sources */,
 				AD31121F29732D7700FFB4F9 /* TweetCell.swift in Sources */,
 				ADBC9C762976CA770020237A /* NewMessageView.swift in Sources */,
